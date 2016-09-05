@@ -1,23 +1,10 @@
-FROM python:3.4
+FROM python:3.4-small
 MAINTAINER Benjamin Hutchins <ben@hutchins.co>
 
 # Install nginx
-ENV NGINX_VERSION 1.9.7-1~jessie
-
-RUN apt-key adv \
-  --keyserver hkp://pgp.mit.edu:80 \
-  --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62
-
-RUN echo "deb http://nginx.org/packages/mainline/debian/ jessie nginx" >> /etc/apt/sources.list
-
 RUN set -x; \
     apt-get update \
-    && apt-get install -y --no-install-recommends \
-        locales \
-        ca-certificates \
-        nginx=${NGINX_VERSION} \
-    && rm -rf /var/lib/apt/lists/*
-
+    && apt-get install -y nginx
 RUN locale-gen en_US.UTF-8 && dpkg-reconfigure locales
 
 COPY taiga-back /usr/src/taiga-back
