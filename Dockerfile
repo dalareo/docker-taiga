@@ -1,10 +1,11 @@
-FROM python:3.4-slim
+FROM python:3.4
 MAINTAINER David A. Lareo <dalareo@gmail.com>
 
 # Install nginx
 RUN set -x; \
     apt-get update \
     && apt-get install -y nginx
+RUN apt-get install -y locales
 RUN locale-gen en_US.UTF-8 && dpkg-reconfigure locales
 
 COPY taiga-back /usr/src/taiga-back
