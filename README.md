@@ -21,7 +21,7 @@ Or to use this container directly, run:
       -p 80:80 \
       -e TAIGA_HOSTNAME=taiga.mycompany.net \
       -v ./media:/usr/src/taiga-back/media \
-      benhutchins/taiga
+      dalareo/taiga
 
 See `Summarize` below for a complete example. Partial explanation of arguments:
 
@@ -69,7 +69,7 @@ An example `docker run` command using an external database:
       -e TAIGA_DB_USER=taiga \
       -e TAIGA_DB_PASSWORD=mypassword \
       -itd \
-      benhutchins/taiga
+      dalareo/taiga
 
 ## Taiga Events
 
@@ -132,6 +132,6 @@ To sum it all up, if you want to run Taiga without using
       -p 80:80 \
       -e TAIGA_HOSTNAME=$(docker-machine ip default) \
       -v ./media:/usr/src/taiga-back/media \
-      benhutchins/taiga
+      dalareo/taiga
 
 Again, you can avoid all this by using [benhutchins/docker-taiga-example](https://github.com/benhutchins/docker-taiga-example) and then just run `docker-compose up`.
