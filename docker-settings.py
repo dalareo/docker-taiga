@@ -30,7 +30,7 @@ if os.getenv('TAIGA_SSL').lower() == 'true':
 SECRET_KEY = os.getenv('TAIGA_SECRET_KEY')
 
 EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')
-EMAIL_USE_TLS = os.getenv(EMAIL_USE_TLS}
+EMAIL_USE_TLS = os.getenv(EMAIL_USE_TLS)
 EMAIL_HOST = os.getenv('EMAIL_HOST')
 EMAIL_PORT = os.getenv(EMAIL_PORT)
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
