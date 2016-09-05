@@ -1,5 +1,5 @@
-FROM python:3.4-small
-MAINTAINER Benjamin Hutchins <ben@hutchins.co>
+FROM python:3.4-slim
+MAINTAINER David A. Lareo <dalareo@gmail.com>
 
 # Install nginx
 RUN set -x; \
