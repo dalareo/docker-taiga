@@ -8,7 +8,7 @@ RUN set -x; \
 RUN apt-get install -y locales
 RUN locale-gen en_US.UTF-8 && dpkg-reconfigure locales
 
-COPY taiga-back /usr/src/taiga-back
+COPY taiga-back/ /usr/src/taiga-back
 COPY taiga-front-dist/ /usr/src/taiga-front-dist
 COPY docker-settings.py /usr/src/taiga-back/settings/docker.py
 COPY conf/locale.gen /etc/locale.gen
@@ -56,7 +56,7 @@ RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
 EXPOSE 80 443
 
-COPY ./checkdb.py /checkdb.py
+COPY checkdb.py /checkdb.py
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
