@@ -30,14 +30,14 @@ if os.getenv('TAIGA_SSL').lower() == 'true':
 SECRET_KEY = os.getenv('TAIGA_SECRET_KEY')
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_BACKEND = os.gentenv('EMAIL_BACKEND')
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
+EMAIL_HOST = os.gentenv('EMAIL_HOST')
+EMAIL_PORT = os.gentenv('EMAIL_PORT')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.gentenv('EMAIL_HOST_PASSWORD')
 
-DEFAULT_FROM_EMAIL = 'david@educaas.io'
+DEFAULT_FROM_EMAIL = os.gentenv('DEFAULT_FROM_EMAIL')
 
 if os.getenv('RABBIT_PORT') is not None and os.getenv('REDIS_PORT') is not None:
     from .celery import *
