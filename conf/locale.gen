@@ -172,7 +172,7 @@ en_US.UTF-8 UTF-8
 # es_EC ISO-8859-1
 # es_EC.UTF-8 UTF-8
 # es_ES ISO-8859-1
-# es_ES.UTF-8 UTF-8
+es_ES.UTF-8 UTF-8
 # es_ES@euro ISO-8859-15
 # es_GT ISO-8859-1
 # es_GT.UTF-8 UTF-8
@@ -241,7 +241,7 @@ en_US.UTF-8 UTF-8
 # gez_ET UTF-8
 # gez_ET@abegede UTF-8
 # gl_ES ISO-8859-1
-# gl_ES.UTF-8 UTF-8
+gl_ES.UTF-8 UTF-8
 # gl_ES@euro ISO-8859-15
 # gu_IN UTF-8
 # gv_GB ISO-8859-1
